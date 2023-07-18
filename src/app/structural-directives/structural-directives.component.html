@@ -1,0 +1,55 @@
+
+
+<p *ngFor="let name of names">{{name}}</p>
+
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+<select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+<h2 *ngFor="let product of products">{{product.name}} price is{{product.price}}.</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>Phone</th>
+            <th>Class</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.class}}</td>
+            <td>{{user.marks}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 *ngIf="true">UI DEVELOPER</h1>
+
+<label for="">number:</label>
+<input type="text" [(ngModel)]="num">
+
+<h1 *ngIf="num>0">this is positive  number</h1>
+<h1 *ngIf="num<0">this is negative number</h1>
+<h1 *ngIf="num==0">this is zero</h1>

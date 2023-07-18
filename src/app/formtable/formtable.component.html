@@ -1,0 +1,47 @@
+
+<input type="text" placeholder="search" name="" id="">
+<button class="b1">Only free delivery</button>
+<br>
+
+<button class="b2" (click)="price()">Price low to high</button>
+<button class="b3"(click)="price()">price high to low</button>
+<button class="b4"  (click)="rating()">Rating low to high</button>
+<button class="b5"(click)="rating()">Rating high to low</button>
+
+<br>
+<button class="b6">Apply 50% Discounts</button>
+<button class="b7">Price with delivery changes</button>
+
+<br>
+<button class="b8">Total price</button>
+<button class="b9">Total cart items</button>  
+
+<table class="table table table-dark">
+    <thead>
+        <tr>
+        
+        <th>SNO</th>
+            <th>product name</th>
+            <th>price</th>
+            <th>Rating</th>
+            <th>Free delivery</th>
+            <th>Actions</th>
+            
+            
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.Rating}}</td>
+            <td>{{product.Freedelivery}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delet(i)">delete</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+<p>login works!</p>
+<div class="parent">
+
+    <div class="child" [formGroup]="loginForm">
+        <h2>LOGIN</h2>
+        <label>Email</label>
+        <input type="text" formControlName="email" placeholder="Enter mail">
+        <br>
+        <label>password</label>
+        <input type="password" formControlName="password" placeholder="password">
+        <br>
+        <button (click)="submit()">submit</button>
+    </div>
+</div>
