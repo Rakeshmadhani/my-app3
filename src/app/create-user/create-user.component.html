@@ -53,6 +53,32 @@
         <br>
     </div>
 
+    <button (click)="addCard()">add card</button>
+    <br>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+
+                <h2>card {{i+1}}</h2>
+
+        <label>No :</label>
+        <input type="number" formControlName="no">
+        <br>
+        
+        <label>Exp :</label>
+        <input type="month" formControlName="exp">
+        <br>
+        
+        <label>Cvv :</label>
+        <input type="number" formControlName="cvv">
+        <br>
+
+        <button (click)="deleteCard(i)" class="btn btn-danger">delete</button>
+
+            </div>
+        </div>
+    </div>
+
     <button (click)="submit()" class="btn btn-warning">submit</button>
 
 </form>
