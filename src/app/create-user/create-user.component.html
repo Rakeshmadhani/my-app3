@@ -1,5 +1,5 @@
 <p>create-user works!</p>
-<form  [formGroup]="userForm">
+<form [formGroup]="userForm">
     <h2>Create-User</h2>
 
     <label for="">Name</label>
@@ -20,23 +20,39 @@
 
     <div formGroupName="address">
 
-    <label for="">Hno</label>
-    <input type="text" formControlName="Hno">
+        <label for="">Hno</label>
+        <input type="text" formControlName="Hno">
+        <br>
+
+        <label for="">state</label>
+        <input type="text" formControlName="state">
+        <br>
+
+        <label for="">pin</label>
+        <input type="number" formControlName="pin">
+        <br>
+    </div>
+
+    <label>Type : </label>
+    <input type="radio" name="type" formControlName="type" value="dayscholor">
+    <label>Days Scholor</label>
+    <input type="radio" name="type" formControlName="type" value="Residential">
+    <label>Residential</label>
     <br>
 
-    <label for="">state</label>
-    <input type="text" formControlName="state">
-    <br>
+    <div *ngIf="userForm.get('type')?.value== 'dayscholor'">
+        <label>Bus fee : </label>
+        <input type="number" formControlName="busfee">
+        <br>
+    </div>
 
-    <label for="">pin</label>
-    <input type="number" formControlName="pin">
-    <br>
+
+    <div *ngIf="userForm.get('type')?.value== 'Residential'">
+        <label>Hostel fee :</label>
+        <input type="number" formControlName="Hostelfee">
+        <br>
     </div>
 
     <button (click)="submit()" class="btn btn-warning">submit</button>
-    
+
 </form>
-
-
-
-
