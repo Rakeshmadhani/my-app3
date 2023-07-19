@@ -18,6 +18,21 @@
     <input type="email" formControlName="email">
     <br>
 
+    <div formGroupName="address">
+
+    <label for="">Hno</label>
+    <input type="text" formControlName="Hno">
+    <br>
+
+    <label for="">state</label>
+    <input type="text" formControlName="state">
+    <br>
+
+    <label for="">pin</label>
+    <input type="number" formControlName="pin">
+    <br>
+    </div>
+
     <button (click)="submit()" class="btn btn-warning">submit</button>
     
 </form>

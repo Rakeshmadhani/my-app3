@@ -13,10 +13,18 @@ export class CreateUserComponent {
     age: new FormControl(),
     phone: new FormControl(),
     email: new FormControl(),
-  });
+    address:new FormGroup({
+    Hno:new FormControl(),
+    state:new FormControl(),
+    pin:new FormControl()
+    })
+    
+
+  })
 
   submit(){
     console.log(this.userForm);
   }
 
-}
+  }
+
