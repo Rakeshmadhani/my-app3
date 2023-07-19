@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, createComponent } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -24,6 +24,7 @@ import { StudentsComponent } from './students/students.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreatAccountComponent } from './creat-account/creat-account.component';
 import { authenticationGuard } from './authentication.guard';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -47,7 +48,8 @@ const routes: Routes = [
     {path:'users',component:UsersComponent},
     {path:'students',component:StudentsComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
-    {path:'create-account',component:CreatAccountComponent}
+    {path:'create-account',component:CreatAccountComponent},
+    {path:'create-user',component:CreateUserComponent}
   ]},
   {path:'', component:LoginComponent},
   {path:'**', component:PagenotfoundComponent}
