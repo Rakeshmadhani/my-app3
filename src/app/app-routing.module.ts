@@ -25,6 +25,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreatAccountComponent } from './creat-account/creat-account.component';
 import { authenticationGuard } from './authentication.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateProductComponent } from './create-product/create-product.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -49,7 +50,8 @@ const routes: Routes = [
     {path:'students',component:StudentsComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'create-account',component:CreatAccountComponent},
-    {path:'create-user',component:CreateUserComponent}
+    {path:'create-user',component:CreateUserComponent},
+    {path:'create-product',component:CreateProductComponent}
   ]},
   {path:'', component:LoginComponent},
   {path:'**', component:PagenotfoundComponent}

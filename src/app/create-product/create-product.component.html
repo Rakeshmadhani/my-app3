@@ -1,0 +1,82 @@
+<form [formGroup]="productForm">
+
+    <h2>Create product</h2>
+    <label>Name :</label>
+    <input type="text" name="" id="">
+    <br>
+
+    <label>price :</label>
+    <input type="number" name="" id="">
+    <br>
+    <label>color :</label>
+    <input type="text" name="" id="">
+    <br>
+
+
+
+    <div formGroupName="features">
+
+        <label>RAM :</label>
+        <input type="text" formControlName="RAM">
+        <br>
+
+        <label>Battery :</label>
+        <input type="text" formControlName="Battery">
+        <br>
+
+        <label>processer :</label>
+        <input type="text" formControlName="processer">
+        <br>
+
+    </div>
+    
+    <button (click)="addcomments()">comments</button>
+
+    <div formArrayName="comments">
+        <div *ngFor="let comment of commentsFormArray.controls; let i = index">
+            <div formGroupName="{{i}}">
+
+                <label>name :</label>
+                <input type="text" formControlName="name">
+                <br>
+
+
+                <label>time :</label>
+                <input type="time" formControlName="time">
+                <br>
+
+                <label>message :</label>
+                <input type="text" formControlName="message">
+                <br>
+
+
+
+                <button (click)="deletecomments(i)" class="btn btn-danger">delete</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label>payment :</label>
+        <input type="radio" name="payment" formControlName="payment" value="upiaddress">
+        <label>upiaddress:</label>
+        <input type="radio" name="payment" formControlName="payment" value="netbankingid">
+        <label>netbankingid:</label>
+    </div>
+
+
+    <div *ngIf="productForm.get('payment')?.value=='upiaddress'">
+        <label>upiaddress :</label>
+        <input type="text" formControlName="upiaddress">
+        <br>
+    </div>
+
+    <div *ngIf="productForm.get('payment')?.value=='netbankingid'">
+        <label>netbankingid :</label>
+        <input type="text" formControlName="netbankingid">
+        <br>
+    </div>
+    <button (click)="submit()">submit</button>
+
+</form>
