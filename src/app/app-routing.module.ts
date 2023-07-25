@@ -28,6 +28,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { notifyGuard } from './notify.guard';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -56,6 +57,7 @@ const routes: Routes = [
     {path:'create-product',component:CreateProductComponent, canDeactivate:[notifyGuard]},
     {path:'vehicle-details/:id',component:VehicledetailsComponent},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {path:'products',component:ProductsComponent}
 
   ]},
   {path:'', component:LoginComponent},

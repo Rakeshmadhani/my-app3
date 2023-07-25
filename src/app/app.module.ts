@@ -34,6 +34,7 @@ import { VehicledetailsComponent } from './vehicledetails/vehicledetails.compone
 import { PricePipe } from './price.pipe';
 import { AgePipe } from './age.pipe';
 import { ImpDirective } from './imp.directive';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { ImpDirective } from './imp.directive';
     PricePipe,
     AgePipe,
     ImpDirective,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
