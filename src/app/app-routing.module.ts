@@ -36,6 +36,8 @@ import { CartComponent } from './cart/cart.component';
 import { Parent1Component } from './parent1/parent1.component';
 import { Parent2Component } from './parent2/parent2.component';
 import { Parent3Component } from './parent3/parent3.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
+import { AboutCeoComponent } from './about/about-ceo/about-ceo.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -71,7 +73,9 @@ const routes: Routes = [
     {path:'cart',component:CartComponent},
     {path:'parent1',component:Parent1Component},
     {path:'parent2',component:Parent2Component},
-    {path:'parent3',component:Parent3Component}
+    {path:'parent3',component:Parent3Component},
+    {path:'about-company',component:AboutCompanyComponent},
+    {path:'about-ceo',component:AboutCeoComponent}
 
   ]},
   {path:'', component:LoginComponent},

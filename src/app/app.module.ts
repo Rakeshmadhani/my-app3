@@ -46,6 +46,7 @@ import { Parent2Component } from './parent2/parent2.component';
 import { Child2Component } from './child2/child2.component';
 import { Parent3Component } from './parent3/parent3.component';
 import { Child3Component } from './child3/child3.component';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { Child3Component } from './child3/child3.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
