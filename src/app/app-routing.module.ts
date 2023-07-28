@@ -29,6 +29,13 @@ import { CreateProductComponent } from './create-product/create-product.componen
 import { notifyGuard } from './notify.guard';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
 import { ProductsComponent } from './products/products.component';
+import { ParentComponent } from './parent/parent.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+import { Parent1Component } from './parent1/parent1.component';
+import { Parent2Component } from './parent2/parent2.component';
+import { Parent3Component } from './parent3/parent3.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -57,7 +64,14 @@ const routes: Routes = [
     {path:'create-product',component:CreateProductComponent, canDeactivate:[notifyGuard]},
     {path:'vehicle-details/:id',component:VehicledetailsComponent},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
-    {path:'products',component:ProductsComponent}
+    {path:'products',component:ProductsComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'item',component:ItemComponent},
+    {path:'nav',component:NavComponent},
+    {path:'cart',component:CartComponent},
+    {path:'parent1',component:Parent1Component},
+    {path:'parent2',component:Parent2Component},
+    {path:'parent3',component:Parent3Component}
 
   ]},
   {path:'', component:LoginComponent},

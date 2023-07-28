@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { domainValidators, stateValidators } from 'src/assets/validators';
 
 @Component({
   selector: 'app-create-user',
@@ -12,10 +13,11 @@ export class CreateUserComponent {
     name: new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
     age: new FormControl('',[Validators.required,Validators.min(0), Validators.max(100)]),
     phone: new FormControl('',[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]),
-    email: new FormControl('',[Validators.required,Validators.email]),
+    email: new FormControl('',[Validators.required,Validators.email, domainValidators]),
+    dob: new FormControl(),
     address:new FormGroup({
-    Hno:new FormControl(),
-    state:new FormControl('',[Validators.required,Validators.minLength(3)]),
+    addressline:new FormControl(),
+    state:new FormControl('',[Validators.required,Validators.minLength(3), stateValidators]),
     pin:new FormControl('',[Validators.required,Validators.min(100000),Validators.max(999999)])
     }),
     type: new FormControl(),

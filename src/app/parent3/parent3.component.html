@@ -1,0 +1,19 @@
+
+<div class="parent">
+
+    <div class="child">
+        <h2 class="text text-danger">calculator</h2>
+        
+        <label>Num1 : </label>
+        <input type="number" placeholder="number1" [(ngModel)]="num1">
+        <br>
+        <label>Num2 : </label>
+        <input type="number" placeholder="number2" [(ngModel)]="num2">
+        <br>
+        <h3>result is : | {{result}}</h3>
+        <br>
+
+      <app-child3 [num1]="num1" [num2]="num2" (info)="catch($event)"></app-child3>
+
+    </div>
+</div>
